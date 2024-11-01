@@ -1,0 +1,206 @@
+/* PROPIEDADES GENERALES */
+* {
+    font-family: "Poppins", sans-serif, "Quicksand", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CÓDIGOS DE COLORES 
+#e8e0d5 - BEIGE CLARO
+#dcc9a7 - BEIGE AMARILLO
+#b2a68c - MARRÓN CLARO
+#50483b - MARRÓN OSCURO
+#141215 - NEGRO
+*/
+
+/* PROPIEDADES DEL NAVBAR */
+.navbar {
+    color: #e8e0d5;
+    background-color: #141215; 
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    padding: 1rem 3rem; 
+}
+
+#icono-navbar img{
+    max-height: 60px; /* Ajusta este valor según el tamaño que desees */
+    width: auto;      /* Mantiene la proporción de la imagen */
+    object-fit: contain; /* Asegura que la imagen se ajuste dentro del espacio disponible */
+    vertical-align: middle;
+}
+
+#texto-navbar {
+    position: absolute;
+    left: 120px; /* Ajustá este valor para que el texto quede a la derecha de la imagen */
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0; /* Ocultar el texto inicialmente */
+    overflow: hidden;
+    white-space: nowrap;
+    clip-path: inset(0 100% 0 0); /* Ocultar el texto */
+}
+
+#icono-navbar:hover #texto-navbar {
+    opacity: 1; /* Mostrar el texto al hacer hover */
+    animation: revelar 1s ease forwards; /* Animación para revelar el texto de izquierda a derecha */
+    color: #e8e0d5;
+}
+
+@keyframes revelar {
+    0% {
+        clip-path: inset(0 100% 0 0); /* Comienza oculto */
+        opacity: 1; /* Mostrar el texto durante la animación */
+    }
+    100% {
+        clip-path: inset(0 0 0 0); /* Revelar completamente el texto */
+    }
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    align-items: center;
+}
+
+#ul-navbar {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* Quita márgenes para unificar el tamaño */
+    display: flex;
+    gap: 20px; /* Espacio uniforme entre elementos */
+}
+
+.li-navbar {
+    display: inline-block; 
+}
+
+.navbar a {
+    color: #e8e0d5;
+    text-decoration: none !important;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #50483b;
+    text-decoration: none !important;
+    transition: color 0.3s ease;
+}
+/* FIN PROPIEDADES DEL NAVBAR */  
+
+/* PROPIEDADES BANNER */
+.banner {
+    display: flex;
+    background-image: url(imagenes/gabo-banner2.jpeg);
+    width: 100%; /* Ajustá el ancho que necesites */
+    background-size: cover; /* Asegura que la imagen cubra todo el div */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+#texto-banner {
+    text-align: center;
+    max-width: 50%;
+    padding: 7rem 5rem;
+}
+
+#titulo-texto-banner, #parrafo-texto-banner {
+    text-align: center;
+}
+
+#titulo-texto-banner {
+    color: #50483b;
+}
+
+#parrafo-texto-banner {
+    color: #141215;
+}
+#imagen-banner {
+    max-width: 50%;
+}
+
+#imagen-banner img {
+    max-width: 100%;
+}
+
+
+/* FIN PROPIEDADES BANNER */
+
+section.seccion-1 {
+    background-color: aqua;
+}
+
+@media (max-width: 768px){
+    .menu-container {
+        color: black;
+        background-color: white;
+        padding: 20px 0;
+        display: flex;
+        justify-content: space-between;
+        position: sticky;
+    }    
+}
+
+/* PROPIEDADES DEL BOTÓN */
+#boton-frase {
+    text-align: center;
+}
+
+#btn-generar {
+    margin: 2rem;
+    background-color: #b2a68c; /* Color de fondo */
+    color: #141215; /* Color del texto */
+    padding: 12px 24px; /* Espacio interno */   
+    border: none; /* Sin bordes */
+    border-radius: 8px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    font-family: 'Poppins', sans-serif; /* Fuente para mantener consistencia */
+    transition: background-color 0.3s, transform 0.3s; /* Transición para hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
+}
+
+/* Efecto al pasar el mouse */
+#btn-generar:hover {
+    background-color: #50483b; /* Color más oscuro al hacer hover */
+    color: #e8e0d5;
+    transform: translateY(-3px); /* Eleva el botón ligeramente */
+}
+
+/* Efecto al hacer clic */
+#btn-generar:active {
+    transform: translateY(1px); /* Reduce un poco la elevación */
+}
+/* PROPIEDADES DEL BOTÓN */
+
+/* PROPIEDADES FOOTER */
+footer {
+    background-color: #141215; /* Color de fondo oscuro */
+    color: #e8e0d5; /* Color del texto en blanco */
+    padding: 20px 0; /* Espacio en la parte superior e inferior */
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.footer-social {
+    margin-top: 10px;
+}
+
+.footer-social a {
+    color: #e8e0d5; /* Color de los iconos en blanco */
+    margin: 0 10px; /* Espaciado entre los íconos */
+    font-size: 20px; /* Tamaño de los iconos */
+    text-decoration: none; /* Quita el subrayado */
+    transition: color 0.3s ease; /* Transición suave al pasar el mouse */
+}
+
+.footer-social a:hover {
+    color: #50483b; /* Cambia de color al pasar el mouse (ejemplo en azul) */
+}
+/* FIN PROPIEDADES FOOTER */

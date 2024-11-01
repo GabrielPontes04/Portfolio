@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-widht, initial-scale=1.0">
+        <link rel="stylesheet" href="formulario.css" />
+        <script src="https://kit.fontawesome.com/a3f97b8fc1.js" crossorigin="anonymous"></script>
+        <!-- Ícono Navegador -->
+        <link rel="icon" href="imagenes/letra-G5.png" type="image/png">
+        <!-- Título -->
+        <title>• Gabriel Pontes •</title>
+        <!-- Tipo de Letra -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+        <!-- FIN - Tipo de Letra -->
+    </head>
+<body>
+    <header>
+        <div class="navbar"> <!-- CONTENEDOR DEL MENÚ -->
+            <a id="icono-navbar" href="index.html">
+                <img src="imagenes/letra-G1.png">
+                <span id="texto-navbar">Gabriel Pontes</span>
+            </a>  
+            <div class="menu"> <!-- MENÚ -->
+                <nav class="lista">
+                    <ul id="ul-navbar"> <!-- LISTA PUNTEADA -->
+                        <li class="li-navbar">SOBRE MI</li>
+                        <li class="li-navbar">HABILIDADES</li>
+                        <li class="li-navbar">EXPERIENCIA</li>
+                        <li class="li-navbar"><a href="formulario.html">CONTACTO</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="formulario">
+        <form class="form" action="/my-handling-form-page" method="post">
+                <ul id="ul-formulario">
+                    <li class="li-formulario">
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="user_name" />
+                    </li>
+                    <br>
+                    <li class="li-formulario">
+                        <label for="mail">Correo electrónico:</label>
+                        <input type="email" id="mail" name="user_mail" />
+                    </li>
+                    <br>
+                    <li class="li-formulario">
+                        <label for="msg">Mensaje:</label>
+                        <textarea id="msg" name="user_message"></textarea>
+                    </li>
+                    <br>
+                    <button type="submit">Enviar</button>
+                </ul>
+        </form>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <p id="frase"></p>
+            <p>&copy; 2024 Gabriel Pontes. Todos los derechos reservados.</p>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

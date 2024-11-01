@@ -1,0 +1,207 @@
+/* PROPIEDADES GENERALES */
+* {
+    font-family: "Poppins", sans-serif, "Quicksand", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CÓDIGOS DE COLORES 
+#e8e0d5 - BEIGE CLARO
+#dcc9a7 - BEIGE AMARILLO
+#b2a68c - MARRÓN CLARO
+#50483b - MARRÓN OSCURO
+#141215 - NEGRO
+*/
+
+/* PROPIEDADES DEL NAVBAR */
+.navbar {
+    color: #e8e0d5;
+    background-color: #141215; 
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    padding: 1rem 3rem; 
+}
+
+#icono-navbar img{
+    max-height: 60px; /* Ajusta este valor según el tamaño que desees */
+    width: auto;      /* Mantiene la proporción de la imagen */
+    object-fit: contain; /* Asegura que la imagen se ajuste dentro del espacio disponible */
+    vertical-align: middle;
+}
+
+#texto-navbar {
+    position: absolute;
+    left: 120px; /* Ajustá este valor para que el texto quede a la derecha de la imagen */
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0; /* Ocultar el texto inicialmente */
+    overflow: hidden;
+    white-space: nowrap;
+    clip-path: inset(0 100% 0 0); /* Ocultar el texto */
+}
+
+#icono-navbar:hover #texto-navbar {
+    opacity: 1; /* Mostrar el texto al hacer hover */
+    animation: revelar 1s ease forwards; /* Animación para revelar el texto de izquierda a derecha */
+    color: #e8e0d5;
+}
+
+@keyframes revelar {
+    0% {
+        clip-path: inset(0 100% 0 0); /* Comienza oculto */
+        opacity: 1; /* Mostrar el texto durante la animación */
+    }
+    100% {
+        clip-path: inset(0 0 0 0); /* Revelar completamente el texto */
+    }
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    align-items: center;
+}
+
+#ul-navbar {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* Quita márgenes para unificar el tamaño */
+    display: flex;
+    gap: 20px; /* Espacio uniforme entre elementos */
+}
+
+.li-navbar {
+    display: inline-block; 
+}
+
+.navbar a {
+    color: #e8e0d5;
+    text-decoration: none !important;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #50483b;
+    text-decoration: none !important;
+    transition: color 0.3s ease;
+}
+/* FIN PROPIEDADES DEL NAVBAR */  
+
+/* FORMULARIO */
+.form {
+    margin: 2rem auto;
+    width: 100%;
+    max-width: 600px;
+    background-color: #e8e0d5;
+    padding: 2rem;
+    border: 2px solid #b2a68c;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#ul-formulario {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#ul-formulario li {
+    display: flex;
+    justify-content: flex-end; /* Alinea elementos hacia la derecha */
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+label {
+    font-size: 1rem;
+    color: #141215;
+    font-weight: 500;
+    margin-right: 1rem;
+    text-align: right;
+}
+
+input, textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.75rem;
+    border: 1px solid #b2a68c;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    color: #141215;
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.3s ease;
+}
+
+input {
+    height: 2.5rem; /* Altura estándar de los campos de texto */
+}
+
+textarea {
+    height: 7.5rem; /* Triple de la altura de los inputs */
+    resize: vertical; /* Permite ajustar la altura verticalmente si es necesario */
+}
+
+input:focus, textarea:focus {
+    border-color: #50483b;
+    outline: none;
+}
+
+button[type="submit"] {
+    background-color: #b2a68c;
+    color: #141215;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 1rem;
+}
+
+button[type="submit"]:hover {
+    background-color: #50483b;
+    color: #e8e0d5;
+    transform: translateY(-2px);
+}
+
+button[type="submit"]:active {
+    transform: translateY(1px);
+}
+
+
+/* PROPIEDADES FOOTER */
+footer {
+    background-color: #141215; /* Color de fondo oscuro */
+    color: #e8e0d5; /* Color del texto en blanco */
+    padding: 20px 0; /* Espacio en la parte superior e inferior */
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.footer-social {
+    margin-top: 10px;
+}
+
+.footer-social a {
+    color: #e8e0d5; /* Color de los iconos en blanco */
+    margin: 0 10px; /* Espaciado entre los íconos */
+    font-size: 20px; /* Tamaño de los iconos */
+    text-decoration: none; /* Quita el subrayado */
+    transition: color 0.3s ease; /* Transición suave al pasar el mouse */
+}
+
+.footer-social a:hover {
+    color: #50483b; /* Cambia de color al pasar el mouse (ejemplo en azul) */
+}
+/* FIN PROPIEDADES FOOTER */
